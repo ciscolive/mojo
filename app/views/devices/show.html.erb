@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ip:</strong>
+  <%= @device.ip %>
+</p>
+
+<p>
+  <strong>Hostname:</strong>
+  <%= @device.hostname %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @device.vendor %>
+</p>
+
+<p>
+  <strong>Os:</strong>
+  <%= @device.os %>
+</p>
+
+<p>
+  <strong>Os ver:</strong>
+  <%= @device.os_ver %>
+</p>
+
+<p>
+  <strong>Contact:</strong>
+  <%= @device.contact %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @device.location %>
+</p>
+
+<p>
+  <strong>Serail:</strong>
+  <%= @device.serail %>
+</p>
+
+<p>
+  <strong>Snmp comm:</strong>
+  <%= @device.snmp_comm %>
+</p>
+
+<%= link_to 'Edit', edit_device_path(@device) %> |
+<%= link_to 'Back', devices_path %>

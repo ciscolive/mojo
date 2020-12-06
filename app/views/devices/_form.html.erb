@@ -1,0 +1,62 @@
+<%= form_with(model: device, local: true) do |form| %>
+  <% if device.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(device.errors.count, "error") %> prohibited this device from being saved:</h2>
+
+      <ul>
+        <% device.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :ip %>
+    <%= form.text_field :ip %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hostname %>
+    <%= form.text_field :hostname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :vendor %>
+    <%= form.text_field :vendor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :os %>
+    <%= form.text_field :os %>
+  </div>
+
+  <div class="field">
+    <%= form.label :os_ver %>
+    <%= form.text_field :os_ver %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contact %>
+    <%= form.text_field :contact %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :serail %>
+    <%= form.text_field :serail %>
+  </div>
+
+  <div class="field">
+    <%= form.label :snmp_comm %>
+    <%= form.text_field :snmp_comm %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

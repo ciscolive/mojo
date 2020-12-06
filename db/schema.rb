@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_06_034703) do
+ActiveRecord::Schema.define(version: 2020_12_06_075923) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -44,6 +44,20 @@ ActiveRecord::Schema.define(version: 2020_12_06_034703) do
     t.index ["admin_user_id", "role_id"], name: "index_admin_users_roles_on_admin_user_id_and_role_id"
     t.index ["admin_user_id"], name: "index_admin_users_roles_on_admin_user_id"
     t.index ["role_id"], name: "index_admin_users_roles_on_role_id"
+  end
+
+  create_table "devices", force: :cascade do |t|
+    t.string "ip"
+    t.string "hostname"
+    t.string "vendor"
+    t.string "os"
+    t.string "os_ver"
+    t.string "contact"
+    t.string "location"
+    t.string "serail"
+    t.string "snmp_comm"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "roles", force: :cascade do |t|

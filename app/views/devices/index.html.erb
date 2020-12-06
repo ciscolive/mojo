@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Devices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ip</th>
+      <th>Hostname</th>
+      <th>Vendor</th>
+      <th>Os</th>
+      <th>Os ver</th>
+      <th>Contact</th>
+      <th>Location</th>
+      <th>Serail</th>
+      <th>Snmp comm</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @devices.each do |device| %>
+      <tr>
+        <td><%= device.ip %></td>
+        <td><%= device.hostname %></td>
+        <td><%= device.vendor %></td>
+        <td><%= device.os %></td>
+        <td><%= device.os_ver %></td>
+        <td><%= device.contact %></td>
+        <td><%= device.location %></td>
+        <td><%= device.serail %></td>
+        <td><%= device.snmp_comm %></td>
+        <td><%= link_to 'Show', device %></td>
+        <td><%= link_to 'Edit', edit_device_path(device) %></td>
+        <td><%= link_to 'Destroy', device, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Device', new_device_path %>
