@@ -1,5 +1,5 @@
 class DeviceMailer < ApplicationMailer
-	default :from => "WENWU YAN <careline@126.com>"
+	default :from => "WENWU YAN <netstack@126.com>"
 
 	def notify_change(user, comment)
 		@user    = user
