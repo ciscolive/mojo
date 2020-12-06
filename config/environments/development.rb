@@ -67,8 +67,8 @@ Rails.application.configure do
 		:address              => 'smtp.126.com',
 		:port                 => 25,
 		:domain               => '126.com',
-		:user_name            => 'careline@126.com',
-		:password             => 'SNLWMYXGSLTAMXSC',
+		:user_name            => 'netstack@126.com',
+		:password             => 'ZUZUWOZYQOJFXCJJ',
 		:authentication       => 'plain',
 		:enable_starttls_auto => true
 	}
